@@ -1,3 +1,2 @@
-Folium
+folium
 streamlit_folium
-Pandas
