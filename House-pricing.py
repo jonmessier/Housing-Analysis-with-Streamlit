@@ -65,6 +65,7 @@ def main():
                The company has provided publicly available data from the King County Assessor's office to use for clustering and prediction.
                
                **Data notes:**  
+               Analysis and modeling notebook found on [Github repo](https://github.com/jonmessier/Housing-Analysis-with-Streamlit/)  
                Data can be found [HERE](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSz2GYT82APb1iS8n07ZXi5C3WsKNEZ7lZu2RPUfHi_ZDZb1A2tmBIQyuQvJf9GbHgTNp2WXj2H6ZHC%2Fpub%3Foutput%3Dcsv)  
                BrickStone is the percentage of a house that is made of brick or stone.
 
