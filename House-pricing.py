@@ -154,7 +154,7 @@ def main():
           |Model_4 test|        4.455284e+10 | 211075.431029|  150082.983641 | 0.490218|
           ''')
 
-          st.image("NN_loss.png")
+          st.image("NN_Loss.png")
           st.image("NN_MAE.png")
           st.image("NN_RSME.png")
 
