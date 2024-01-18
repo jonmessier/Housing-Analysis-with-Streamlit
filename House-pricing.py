@@ -11,6 +11,7 @@ from streamlit_folium import st_folium
 import datetime as datetime
 
 st.title('Housing Data Analysis')
+st.subheader('Jon Messier 2024')
 tab_titles = ['Overview', "Clustering", "Price Modeling"]
 tab1, tab2, tab3 = st.tabs(tab_titles)
 
