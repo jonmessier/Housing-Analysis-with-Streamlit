@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
-import plotly.graph_objects as go 
+
+#import plotly.graph_objects as go 
 import plotly.express as px
+
 #Mapping tools
 import folium
 from streamlit_folium import st_folium
@@ -9,6 +11,7 @@ from streamlit_folium import st_folium
 import datetime as datetime
 
 st.title('Housing Data Analysis')
+st.subheader('Jon Messier 2024')
 tab_titles = ['Overview', "Clustering", "Price Modeling"]
 tab1, tab2, tab3 = st.tabs(tab_titles)
 
@@ -63,6 +66,7 @@ def main():
                The company has provided publicly available data from the King County Assessor's office to use for clustering and prediction.
                
                **Data notes:**  
+               Analysis and modeling notebook found on [Github repo](https://github.com/jonmessier/Housing-Analysis-with-Streamlit/)  
                Data can be found [HERE](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2Fe%2F2PACX-1vSz2GYT82APb1iS8n07ZXi5C3WsKNEZ7lZu2RPUfHi_ZDZb1A2tmBIQyuQvJf9GbHgTNp2WXj2H6ZHC%2Fpub%3Foutput%3Dcsv)  
                BrickStone is the percentage of a house that is made of brick or stone.
 
@@ -152,14 +156,14 @@ def main():
           |Model_4 test|        4.455284e+10 | 211075.431029|  150082.983641 | 0.490218|
           ''')
 
-          st.image("NN_loss.png")
+          st.image("NN_Loss.png")
           st.image("NN_MAE.png")
           st.image("NN_RSME.png")
 
           st.write('''
           This model provides the highest $R^2$ value and combined with the lowest combined RMSE score. The $R^2$ value is telling us is that the model accounts for \~49% of the variance in the data.  In general, a model with a higher R^2 value closer to 1 is better, however an $R^2=1$ usually indicates overfitting.  A SME is needed to verify the strength of this metric for the dataset.  
 
-          The RMSE is telling us the root mean square absolute error (more simply thought of as the average error from the mean without +\/-) is about $211k.  Since our mean home price is $664,496.90, this error represents nearly \~+\\-30% of the value. This may or may not be helpful to our client depending on their level of financial risk and understanding of the property value.  If you could purchase a property below the predicted value less the RSME you have a high likihood of a potential profit.  Of course, the house would have to be resold and factors like interest paid, taxes, repairs are not accounted for!  This is Not Financial Advice!
+          The RMSE is telling us the root mean square absolute error (more simply thought of as the average error from the mean without +\/-) is about \$211k.  Since our mean home price is \$664,496.90, this error represents nearly \~+\\-30% of the value. This may or may not be helpful to our client depending on their level of financial risk and understanding of the property value.  If you could purchase a property below the predicted value less the RSME you have a high likihood of a potential profit.  Of course, the house would have to be resold and factors like interest paid, taxes, repairs are not accounted for!  This is Not Financial Advice!
           
           ''')
 
